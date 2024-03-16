@@ -105,19 +105,19 @@ const WeatherDisplay = ({city}) => {
     <div className='weather-display'>
       {Loading && <p>Loading data...</p>}
       {!Loading && weatherData && <div className='data_card'>
-        <div className='city_data'>
+        <div className='weather-card'>
           <span>Temperature</span>
           <p>{weatherData.current.temp_c}°C</p>
         </div>
-        <div className='city_data'>
+        <div className='weather-card'>
           <span>Humidity</span>
           <p>{weatherData.current.humidity}%</p>
         </div>
-        <div className='city_data'>
+        <div className='weather-card'>
           <span>Condition</span>
           <p>{weatherData.current.condition.text}</p>
         </div>
-        <div className='city_data'>
+        <div className='weather-card'>
           <span>wind</span>
           <p>{weatherData.current.wind_kph} kph</p>
         </div>
