@@ -63,7 +63,7 @@ p{
   font-weight: 400;
 }
 
-.data_card{
+.weather-cards{
   display: flex;
   flex-wrap: wrap;
   gap: 25px;
