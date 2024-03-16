@@ -74,10 +74,12 @@ const SearchBar = ({onSearch}) => {
   };
 
   return (<div className='search-bar'>
-    <input type='text' value={city} onChange={e => setCity(e.target.value)} placeholder='Enter city name' />
+    <input type='text' value={city} onChange={e => setCity(e.target.value)} placeholder='Enter city name...' />
     <button onClick={handleSearch}>Search</button>
   </div>)
 }
+
+
 
 const WeatherDisplay = ({city}) => {
   const [weatherData, setWeatherdata] = useState(null);
@@ -103,20 +105,20 @@ const WeatherDisplay = ({city}) => {
     <div className='weather-display'>
       {Loading && <p>Loading data...</p>}
       {!Loading && weatherData && <div className='data_card'>
-        <div className='weather-card'>
+        <div className='city_data'>
           <span>Temperature</span>
           <p>{weatherData.current.temp_c}°C</p>
         </div>
-        <div className='weather-card'>
+        <div className='city_data'>
           <span>Humidity</span>
           <p>{weatherData.current.humidity}%</p>
         </div>
-        <div className='weather-card'>
+        <div className='city_data'>
           <span>Condition</span>
           <p>{weatherData.current.condition.text}</p>
         </div>
-        <div className='weather-card'>
-          <span>Wind Speed</span>
+        <div className='city_data'>
+          <span>wind</span>
           <p>{weatherData.current.wind_kph} kph</p>
         </div>
         </div>}
